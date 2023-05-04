@@ -17,6 +17,9 @@ app.use('/api/reviews', reviewRoutes)
 const dishRoutes = require('./routes/dishRoutes')
 app.use('/api/dishes', dishRoutes)
 
+const dataRoutes = require('./routes/dataRoutes')
+app.use('/api/data', dataRoutes)
+
 app.listen(PORT, () => {
     console.log(`Server is running on
 port ${PORT}.`);
