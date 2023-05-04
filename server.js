@@ -2,6 +2,12 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 
+// Set the Access-Control-Allow-Origin header for all routes
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 let dbConnect = require("./dbConnect");
 // parse requests of content-type - application/json
 app.use(express.json());
